@@ -9,6 +9,28 @@ O objetivo principal é colocar em prática umas das principais ferramentas da O
 **ABSTRAÇÃO, ENCAPSULAMENTO, HERANÇA E POLIMORFISMO,** através de um projeto Java.  
 Para informações mais detalhadas sobre as ferramentas citadas, consulte o README.md do original [cami-la/desafio-poo-dio].
 
+
+<p align="center">
+	<img alt="Repository language count" src="https://img.shields.io/github/languages/count/didifive/desafio-poo-dio">
+	<a href="https://www.linkedin.com/in/cami-la/">
+		<img alt="Made by Camila" src="https://img.shields.io/badge/made%20by-Camila-blue">
+	</a>
+    <a href="https://www.linkedin.com/in/luis-carlos-zancanela/">
+		<img alt="Update by Didi" src="https://img.shields.io/badge/update%20by-Didi-green">
+	</a>
+	<a href="https://github.com/didifive/desafio-poo-dio/commits/master">
+		<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/didifive/desafio-poo-dio?color=blue">
+	</a>
+	<img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=blue">
+</p>
+
+<p align="center">
+	<a href="https://dev.java/">
+	  <img alt="Java" src="https://img.shields.io/static/v1?color=red&label=Dev&message=Java&style=for-the-badge&logo=Java">
+	</a>
+</p>
+
+
 ## 🛑 Pré-Requisitos
 ✅ Conhecer a sintaxe da Java  
 ✅ Java JDK 11  
