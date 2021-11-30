@@ -10,6 +10,13 @@ public class Dev {
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudosConcluidos = new LinkedHashSet<>();
 
+    public Dev() {
+    }
+
+    public Dev(String nome) {
+        this.nome = nome;
+    }
+
     public void inscreverBootcamp(Bootcamp bootcamp){
         this.conteudosInscritos.addAll(bootcamp.getConteudos());
         bootcamp.getDevsInscritos().add(this);
@@ -21,17 +28,9 @@ public class Dev {
             this.conteudosConcluidos.add(conteudo.get());
             this.conteudosInscritos.remove(conteudo.get());
         } else {
-            System.err.println("Você não está matriculado em nenhum conteúdo!");
+            System.err.println("Não existe curso para progredir, faça uma nova inscrição.");
         }
     }
-
-    public double calcularTotalXp() {
-        return this.conteudosConcluidos
-                .stream()
-                .mapToDouble(Conteudo::calcularXp)
-                .sum();
-    }
-
 
     public String getNome() {
         return nome;
@@ -57,6 +56,13 @@ public class Dev {
         this.conteudosConcluidos = conteudosConcluidos;
     }
 
+    private double calcularTotalXp() {
+        return this.conteudosConcluidos
+                .stream()
+                .mapToDouble(Conteudo::calcularXp)
+                .sum();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -68,5 +74,21 @@ public class Dev {
     @Override
     public int hashCode() {
         return Objects.hash(nome, conteudosInscritos, conteudosConcluidos);
+    }
+
+    @Override
+    public String toString() {
+        return "Dev{\n"
+                + "\tnome: \"" + this.nome + "\",\n"
+                + "\tconteudosInscritos: " + this.conteudosInscritos + ",\n"
+                + "\tconteudosConcluidos: " + this.conteudosConcluidos + ",\n"
+                + "\txP: " + calcularTotalXp() + "\n"
+                + "}";
+//        return "------------\n"
+//            + "Nome do Dev: " + this.nome + "\n"
+//            + "Conteúdos Inscritos de " + this.nome + ": " + this.conteudosInscritos + "\n"
+//            + "Conteúdos Concluídos de " + this.nome + ": " + this.conteudosConcluidos + "\n"
+//            + "XP Total: " + calcularTotalXp() + "\n"
+//            + "------------\n";
     }
 }

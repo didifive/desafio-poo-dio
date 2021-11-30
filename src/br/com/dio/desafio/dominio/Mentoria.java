@@ -14,6 +14,10 @@ public class Mentoria extends Conteudo{
     public Mentoria() {
     }
 
+    public Mentoria(String titulo) {
+        setTitulo(titulo);
+    }
+
     public LocalDate getData() {
         return data;
     }
@@ -24,10 +28,10 @@ public class Mentoria extends Conteudo{
 
     @Override
     public String toString() {
-        return "Mentoria{" +
-                "titulo='" + getTitulo() + '\'' +
-                ", descricao='" + getDescricao() + '\'' +
-                ", data=" + data +
-                '}';
+        return "\n\t\tmentoria: {\n"
+                + "\t\t\ttitulo: \"" + getTitulo() + "\",\n"
+                + "\t\t\tdescricao: \"" + getDescricao() + "\",\n"
+                + "\t\t\tdata: \"" + data + "\",\n"
+                + "\t\t}";
     }
 }

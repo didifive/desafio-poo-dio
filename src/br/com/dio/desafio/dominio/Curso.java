@@ -12,6 +12,9 @@ public class Curso extends Conteudo{
     public Curso() {
     }
 
+    public Curso(String titulo) {
+        setTitulo(titulo);
+    }
 
     public int getCargaHoraria() {
         return cargaHoraria;
@@ -23,10 +26,10 @@ public class Curso extends Conteudo{
 
     @Override
     public String toString() {
-        return "Curso{" +
-                "titulo='" + getTitulo() + '\'' +
-                ", descricao='" + getDescricao() + '\'' +
-                ", cargaHoraria=" + cargaHoraria +
-                '}';
+        return "\n\t\tcurso: {\n"
+                + "\t\t\ttitulo: \"" + getTitulo() + "\",\n"
+                + "\t\t\tdescricao: \"" + getDescricao() + "\",\n"
+                + "\t\t\tcargaHoraria: " + getCargaHoraria() + ",\n"
+                + "\t\t}";
     }
 }
