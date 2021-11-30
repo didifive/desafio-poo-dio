@@ -23,15 +23,12 @@ Para informações mais detalhadas sobre as ferramentas citadas, consulte o READ
   * Sobrecarga no construtor, criando a opção de parâmetro para receber o nome do "dev", assim não necessita de utilizar o `setNome()` para setar nome pela primeira vez;
   * Sobrescrita, `@Override`, do método `toString()` para montar um padrão de retorno das informações do dev;
   * O método `calcularTotalXp()` teve o modificador de acesso alterado para `private` para ser consumido somente pela classe Dev;
+  * O método `progredir()` também retorna texto para demonstrar visualmente ao usuário o progresso do dev;
 * Classes `Curso` e `Mentoria`:
   * Método `toString()` alterado para retornar os dados simulando um JSON formatado;
   * Sobrecarga no construtor das respectivas classes com parâmetro para setar o título;
-
-
-```
-TODO:
-Criar Classe Desafio que extende Conteúdo.
-```
+* Criada a classe `Desafio`, que estende `Conteudo`, para também poder ser inclusa como conteúdo em bootcamps;
+* Classe `Bootcamp` teve o método `@Override toString()` para retornar resumo do Bootcamp.
 
 ---
 

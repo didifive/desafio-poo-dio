@@ -14,7 +14,7 @@ public class Dev {
     }
 
     public Dev(String nome) {
-        this.nome = nome;
+        setNome(nome);
     }
 
     public void inscreverBootcamp(Bootcamp bootcamp){
@@ -27,6 +27,7 @@ public class Dev {
         if(conteudo.isPresent()) {
             this.conteudosConcluidos.add(conteudo.get());
             this.conteudosInscritos.remove(conteudo.get());
+            System.out.printf("Dev %s concluiu \"%s\"\n",getNome(),conteudo.get().getTitulo());
         } else {
             System.err.println("Não existe curso para progredir, faça uma nova inscrição.");
         }
@@ -79,9 +80,9 @@ public class Dev {
     @Override
     public String toString() {
         return "Dev{\n"
-                + "\tnome: \"" + this.nome + "\",\n"
-                + "\tconteudosInscritos: " + this.conteudosInscritos + ",\n"
-                + "\tconteudosConcluidos: " + this.conteudosConcluidos + ",\n"
+                + "\tnome: \"" + getNome() + "\",\n"
+                + "\tconteudosInscritos: " + getConteudosInscritos() + ",\n"
+                + "\tconteudosConcluidos: " + getConteudosConcluidos() + ",\n"
                 + "\txP: " + calcularTotalXp() + "\n"
                 + "}";
 //        return "------------\n"
